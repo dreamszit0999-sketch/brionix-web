@@ -1,5 +1,6 @@
 import { useMemo, useState, type FormEvent } from "react";
 import { ArrowDown, ArrowRight, ArrowUpRight, BrainCircuit, BookOpen, Briefcase, CheckCircle2, Layers3, Mail, Menu, Monitor, Phone, Send, ShieldCheck, X, Zap } from "lucide-react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import "./styles/globals.css";
 
 const WHATSAPP = "525538107582";
@@ -50,5 +51,6 @@ export default function App(){
   </main>
   <footer className="footer"><div className="container footer-main"><Brand/><p>Tecnología, soluciones y conocimiento para impulsar ideas y negocios.</p><a href="#inicio" className="back-top">Volver arriba ↑</a></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} BRIONIX SYSTEMS. Todos los derechos reservados.</span><div><a href="#servicios">Servicios</a><a href="#soluciones">Soluciones</a><a href="#digital">Digital</a><a href="#ia">IA & Desarrollo</a></div></div></footer>
   <a className="floating-whatsapp" href={"https://wa.me/"+WHATSAPP} target="_blank" rel="noreferrer" aria-label="Contactar por WhatsApp"><Phone size={21}/><span>WhatsApp</span></a>
+  <SpeedInsights />
  </div>
 }
