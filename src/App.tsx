@@ -1,6 +1,7 @@
 import { useMemo, useState, type FormEvent } from "react";
 import { ArrowDown, ArrowRight, ArrowUpRight, BrainCircuit, BookOpen, Briefcase, CheckCircle2, Layers3, Mail, Menu, Monitor, Phone, Send, ShieldCheck, X, Zap, Target, Compass, Cpu, Network, Sparkles } from "lucide-react";
 import "./styles/globals.css";
+import "./styles/redesign.css";
 
 const WHATSAPP = "525538107582";
 const EMAIL = "dreamszit0999@gmail.com";
