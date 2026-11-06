@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+<title id="title">Brionix Systems — símbolo</title><desc id="desc">Monograma B metálico rodeado por una órbita dorada y una luciérnaga geométrica.</desc>
+<defs>
+ <linearGradient id="steel" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset=".28" stop-color="#aebdca"/><stop offset=".56" stop-color="#f2f5f7"/><stop offset="1" stop-color="#75899a"/></linearGradient>
+ <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff0b1"/><stop offset=".48" stop-color="#f4b84f"/><stop offset="1" stop-color="#d97927"/></linearGradient>
+ <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a8edff"/><stop offset="1" stop-color="#4b9fce"/></linearGradient>
+ <filter id="glow"><feGaussianBlur stdDeviation="3.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<g fill="none" stroke-linejoin="round" stroke-linecap="round">
+ <path d="M48 46V194H119C158 194 181 174 181 143C181 121 168 105 147 98C163 89 172 75 172 58C172 28 148 12 111 12H48Z" stroke="url(#steel)" stroke-width="12"/>
+ <path d="M79 44H113C132 44 142 52 142 65C142 79 132 87 112 87H79M79 119H121C143 119 153 128 153 144C153 159 142 168 120 168H79" stroke="url(#steel)" stroke-width="9"/>
+ <path d="M24 154C44 205 119 221 181 181C218 157 228 104 199 65C183 43 164 31 144 25" stroke="url(#gold)" stroke-width="5" filter="url(#glow)"/>
+ <path d="M147 26C157 6 174 2 187 13C196 21 194 34 181 41C168 48 154 42 147 26Z" stroke="url(#gold)" stroke-width="3"/>
+ <path d="M155 26 166 12 178 27 166 39Z" stroke="url(#cyan)" stroke-width="2"/>
+ <path d="M166 12 166 39M155 26H178" stroke="#dcebf1" stroke-width="1.2" opacity=".8"/>
+ <path d="M188 15 202 5M194 29 211 27" stroke="url(#gold)" stroke-width="2"/>
+</g>
+<circle cx="190" cy="13" r="3.5" fill="#fff1b7" filter="url(#glow)"/>
+<circle cx="211" cy="27" r="2.5" fill="#f4b84f"/>
+</svg>
