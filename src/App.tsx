@@ -1,5 +1,5 @@
 import { useMemo, useState, type FormEvent } from "react";
-import { ArrowDown, ArrowRight, ArrowUpRight, BrainCircuit, BookOpen, BriefcaseBusiness, CheckCircle2, Layers3, Mail, Menu, Monitor, Phone, Send, ShieldCheck, X, Zap } from "lucide-react";
+import { ArrowDown, ArrowRight, ArrowUpRight, BrainCircuit, BookOpen, Briefcase, CheckCircle2, Layers3, Mail, Menu, Monitor, Phone, Send, ShieldCheck, X, Zap } from "lucide-react";
 import "./styles/globals.css";
 
 const WHATSAPP = "525538107582";
