@@ -1,5 +1,5 @@
-import { useMemo, useState } from "react";
-import { ArrowDown, ArrowRight, ArrowUpRight, BrainCircuit, BookOpen, BriefcaseBusiness, CheckCircle2, Layers3, Mail, Menu, Monitor, Phone, Send, ShieldCheck, Sparkles, Wrench, X, Zap } from "lucide-react";
+import { useMemo, useState, type FormEvent } from "react";
+import { ArrowDown, ArrowRight, ArrowUpRight, BrainCircuit, BookOpen, BriefcaseBusiness, CheckCircle2, Layers3, Mail, Menu, Monitor, Phone, Send, ShieldCheck, X, Zap } from "lucide-react";
 import "./styles/globals.css";
 
 const WHATSAPP = "525538107582";
@@ -16,7 +16,7 @@ function Brand(){return <a className="brand" href="#inicio" aria-label="Brionix 
 function ContactForm(){
  const [service,setService]=useState(""); const [name,setName]=useState(""); const [phone,setPhone]=useState(""); const [email,setEmail]=useState(""); const [message,setMessage]=useState(""); const [sent,setSent]=useState(false);
  const prepared=useMemo(()=>["Hola, Brionix Systems. Quiero solicitar información.","Nombre: "+name,"Teléfono: "+phone,"Correo: "+email,"Interés: "+service,"Mensaje: "+(message||"Sin mensaje adicional")].join("\n"),[name,phone,email,service,message]);
- function submit(e:React.FormEvent<HTMLFormElement>){e.preventDefault();if(!service)return;window.open("https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(prepared),"_blank","noopener,noreferrer");setSent(true)}
+ function submit(e:FormEvent<HTMLFormElement>){e.preventDefault();if(!service)return;window.open("https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(prepared),"_blank","noopener,noreferrer");setSent(true)}
  return <form className="contact-form" onSubmit={submit}>
   <div className="form-heading"><span className="form-icon"><Send size={21}/></span><div><p className="eyebrow">HABLEMOS DE TU PROYECTO</p><h3>Solicita una asesoría o cotización</h3><p>Cuéntanos qué necesitas y elegimos juntos el siguiente paso.</p></div></div>
   <div className="form-grid">
