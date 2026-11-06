@@ -73,3 +73,8 @@ body{background:#06111f;color:#edf2f6}
  .floating-whatsapp{background:#0d2130}
 }
 @media(min-width:761px){.hero-symbol{width:min(76%,365px)}}
+
+/* Wordmark finish: brushed silver lettering with a warm signature X */
+.brand-word{background:linear-gradient(180deg,#ffffff 0%,#b9c8d4 44%,#f7fafc 63%,#8095a8 100%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 1px 0 #ffffff10}
+.brand-word small{background:none;-webkit-text-fill-color:#aab9c6;color:#aab9c6;text-shadow:none}
+.brand-x{background:linear-gradient(180deg,#fff0bf,#f6b84d 55%,#a75c20);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-shadow:none}
