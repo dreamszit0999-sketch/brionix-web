@@ -89,3 +89,27 @@ body{background:#050b14;color:#edf7ff}
  .contact-form{background:#091a2a}
 }
 /* The warm amber is reserved for the living light of the firefly, not the interface. */
+
+
+/* SERVICE CATALOG — make concrete offerings immediately discoverable */
+.services-section .section-top>span:last-child{color:#78dfff}
+.service-list{margin-top:34px}
+.service-item{background:linear-gradient(110deg,#091a2a,#071321 75%)}
+.service-trigger{min-height:112px}
+.service-title strong{font-size:clamp(16px,1.6vw,21px)}
+.service-title em{max-width:620px}
+.service-detail{grid-template-columns:1.2fr .8fr;gap:38px}
+.service-detail>div:first-child{display:grid;grid-template-columns:1fr 1fr;column-gap:20px;align-content:start}
+.service-detail .detail-caption{grid-column:1/-1}
+.service-detail p{font-size:12px;line-height:1.65}
+.service-detail p svg{flex:0 0 15px}
+.service-outcome{padding:18px 20px;border-left:1px solid #24516d;background:linear-gradient(135deg,#0b2135,#081625)}
+.service-outcome>p{font-size:13px;line-height:1.8;color:#c2d5e2}
+.service-outcome a{display:inline-flex;align-items:center;gap:8px;margin-top:12px}
+@media(max-width:720px){
+ .service-trigger{min-height:100px;padding:16px 12px;gap:10px}
+ .service-title em{display:block;font-size:11px}
+ .service-detail{grid-template-columns:1fr;gap:18px}
+ .service-detail>div:first-child{grid-template-columns:1fr}
+ .service-outcome{border-left:0;border-top:1px solid #24516d}
+}
