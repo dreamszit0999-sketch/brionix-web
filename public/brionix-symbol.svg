@@ -1,30 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
-<title id="title">Brionix Systems — luciérnaga de inteligencia</title>
-<desc id="desc">Luciérnaga futurista con alas holográficas azul eléctrico y cian, cuerpo estilizado y abdomen ámbar luminoso.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 260" role="img" aria-labelledby="t d">
+<title id="t">Brionix Systems — Firefly intelligence mark</title>
+<desc id="d">Emblema refinado de luciérnaga tecnológica, con cuatro alas estilizadas en cian eléctrico, cuerpo metálico y una luz ámbar brillante.</desc>
 <defs>
- <linearGradient id="wing" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e6fbff" stop-opacity=".92"/><stop offset=".38" stop-color="#54d7ff" stop-opacity=".62"/><stop offset="1" stop-color="#1679d1" stop-opacity=".08"/></linearGradient>
- <linearGradient id="wing2" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#8deaff" stop-opacity=".08"/><stop offset=".55" stop-color="#3ac6ff" stop-opacity=".55"/><stop offset="1" stop-color="#d7faff" stop-opacity=".88"/></linearGradient>
- <linearGradient id="body" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f1fcff"/><stop offset=".38" stop-color="#6e9db9"/><stop offset="1" stop-color="#1a4565"/></linearGradient>
- <radialGradient id="amber"><stop stop-color="#fff9d6"/><stop offset=".24" stop-color="#ffe29a"/><stop offset=".58" stop-color="#ffb33f"/><stop offset="1" stop-color="#ff8b28" stop-opacity=".05"/></radialGradient>
- <filter id="blueGlow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
- <filter id="amberGlow" x="-150%" y="-150%" width="400%" height="400%"><feGaussianBlur stdDeviation="11" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <linearGradient id="wing" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e7fbff"/><stop offset=".3" stop-color="#73dcff"/><stop offset=".72" stop-color="#249bdc"/><stop offset="1" stop-color="#15578f"/></linearGradient>
+ <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#b8f5ff"/><stop offset=".5" stop-color="#35caff"/><stop offset="1" stop-color="#1687ce"/></linearGradient>
+ <linearGradient id="body" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f1fdff"/><stop offset=".4" stop-color="#9bb9cb"/><stop offset="1" stop-color="#345b76"/></linearGradient>
+ <radialGradient id="light"><stop stop-color="#fffde7"/><stop offset=".18" stop-color="#fff0bd"/><stop offset=".45" stop-color="#ffc35e"/><stop offset=".8" stop-color="#ff9c35"/><stop offset="1" stop-color="#ff9c35" stop-opacity="0"/></radialGradient>
+ <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <filter id="shine"><feGaussianBlur stdDeviation="13"/></filter>
 </defs>
-<g fill="none" stroke-linecap="round" stroke-linejoin="round">
- <path d="M113 105C78 46 30 35 22 62C14 90 49 117 105 126C65 126 38 145 48 163C60 185 95 159 121 130" fill="url(#wing)" stroke="#8deaff" stroke-width="2.2" filter="url(#blueGlow)"/>
- <path d="M127 105C162 46 210 35 218 62C226 90 191 117 135 126C175 126 202 145 192 163C180 185 145 159 119 130" fill="url(#wing2)" stroke="#8deaff" stroke-width="2.2" filter="url(#blueGlow)"/>
- <path d="M111 110C78 70 51 61 31 67M108 119C74 113 58 104 42 88M129 110C162 70 189 61 209 67M132 119C166 113 182 104 198 88" stroke="#c8f7ff" stroke-opacity=".75" stroke-width="1.2"/>
- <path d="M112 110C93 85 76 78 57 77M128 110C147 85 164 78 183 77" stroke="#43cfff" stroke-opacity=".8" stroke-width="1"/>
- <path d="M113 113C102 97 98 80 103 66M127 113C138 97 142 80 137 66" stroke="#7be2ff" stroke-width="2"/>
- <path d="M115 111Q120 101 125 111L132 151Q120 166 108 151Z" fill="url(#body)" stroke="#b8efff" stroke-width="1.4"/>
- <ellipse cx="120" cy="93" rx="10" ry="12" fill="url(#body)" stroke="#c9f6ff" stroke-width="1.4"/>
- <path d="M115 84Q103 68 99 61M125 84Q137 68 141 61" stroke="#8deaff" stroke-width="1.8"/>
- <circle cx="99" cy="60" r="2.5" fill="#8deaff"/><circle cx="141" cy="60" r="2.5" fill="#8deaff"/>
- <path d="M111 151Q120 164 129 151" stroke="#8deaff" stroke-width="1.5"/>
- <path d="M111 148Q120 183 120 191Q120 183 129 148" stroke="#6bcfff" stroke-width="2"/>
- <ellipse cx="120" cy="190" rx="16" ry="21" fill="url(#amber)" stroke="#ffc66d" stroke-width="1.5" filter="url(#amberGlow)"/>
- <ellipse cx="120" cy="190" rx="7" ry="10" fill="#fff0b5" filter="url(#amberGlow)"/>
- <path d="M101 180Q78 190 65 211M139 180Q162 190 175 211" stroke="#38c9ff" stroke-opacity=".7" stroke-width="1.2"/>
- <path d="M120 214V228M113 222H127" stroke="#ffbd55" stroke-width="1.4" filter="url(#blueGlow)"/>
+<g transform="translate(0 3)" stroke-linecap="round" stroke-linejoin="round">
+ <!-- swept upper wings -->
+ <path d="M145 112C119 61 68 24 42 38C16 53 40 104 121 133C76 119 42 132 45 155C48 180 92 172 145 139Z" fill="url(#wing)" fill-opacity=".78" stroke="url(#edge)" stroke-width="2.8"/>
+ <path d="M175 112C201 61 252 24 278 38C304 53 280 104 199 133C244 119 278 132 275 155C272 180 228 172 175 139Z" fill="url(#wing)" fill-opacity=".78" stroke="url(#edge)" stroke-width="2.8"/>
+ <!-- lower wing sweep -->
+ <path d="M145 130C107 130 72 161 80 185C88 209 125 184 153 151Z" fill="#0e79b6" fill-opacity=".3" stroke="#53d4ff" stroke-width="2"/>
+ <path d="M175 130C213 130 248 161 240 185C232 209 195 184 167 151Z" fill="#0e79b6" fill-opacity=".3" stroke="#53d4ff" stroke-width="2"/>
+ <!-- wing veins -->
+ <g fill="none" stroke="#d8f8ff" stroke-opacity=".75" stroke-width="1.5">
+  <path d="M151 126C111 91 76 56 49 46M143 133C99 120 67 102 47 78M137 141C100 145 75 155 62 168"/>
+  <path d="M169 126C209 91 244 56 271 46M177 133C221 120 253 102 273 78M183 141C220 145 245 155 258 168"/>
+ </g>
+ <g fill="none" stroke="#8ce8ff" stroke-opacity=".85" stroke-width="1">
+  <path d="M150 123Q110 74 85 60M170 123Q210 74 235 60M143 135Q105 133 91 155M177 135Q215 133 229 155"/>
+ </g>
+ <!-- head, antennae and tapered thorax -->
+ <path d="M150 105Q135 81 128 65M170 105Q185 81 192 65" fill="none" stroke="#83e5ff" stroke-width="2.5"/>
+ <circle cx="127" cy="62" r="3" fill="#c9f8ff"/><circle cx="193" cy="62" r="3" fill="#c9f8ff"/>
+ <ellipse cx="160" cy="105" rx="12" ry="13" fill="url(#body)" stroke="#d9f7ff" stroke-width="1.6"/>
+ <path d="M150 116Q160 109 170 116L179 158Q160 177 141 158Z" fill="url(#body)" stroke="#b9eaff" stroke-width="1.8"/>
+ <path d="M148 126Q160 134 172 126M145 145Q160 153 175 145" fill="none" stroke="#e6faff" stroke-opacity=".65" stroke-width="1"/>
+ <!-- luminous abdomen -->
+ <ellipse cx="160" cy="195" rx="34" ry="34" fill="#ffb347" opacity=".28" filter="url(#shine)"/>
+ <path d="M144 160Q160 171 176 160L170 194Q160 207 150 194Z" fill="url(#light)" stroke="#ffd58b" stroke-width="1.5" filter="url(#glow)"/>
+ <ellipse cx="160" cy="187" rx="7" ry="12" fill="#fff9df" filter="url(#glow)"/>
+ <!-- small light rays -->
+ <g fill="none" stroke="#ffbf62" stroke-width="1.5" opacity=".9">
+  <path d="M160 214V231M145 209L136 220M175 209L184 220"/>
+ </g>
 </g>
-<circle cx="120" cy="190" r="3" fill="#fff8d9"/>
 </svg>
