@@ -109,11 +109,11 @@ function VirtualAdvisor(){
  const selected=advisorPaths[path];
  function validateContact(){
   const cleanName=name.trim();
-  const digits=phone.replace(/\\D/g,"");
+  const digits=phone.replace(/\D/g,"");
   const cleanEmail=email.trim();
   if(cleanName.length<2){setContactError("Escribe tu nombre (al menos 2 caracteres).");return false;}
-  if(digits.length<10||digits.length>15||/^([0-9])\\1+$/.test(digits)){setContactError("Ingresa un WhatsApp válido con lada. Usa entre 10 y 15 dígitos.");return false;}
-  if(cleanEmail&&!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]{2,}$/.test(cleanEmail)){setContactError("Revisa el formato del correo o déjalo vacío.");return false;}
+  if(digits.length<10||digits.length>15||/^([0-9])\1+$/.test(digits)){setContactError("Ingresa un WhatsApp válido con lada. Usa entre 10 y 15 dígitos.");return false;}
+  if(cleanEmail&&!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(cleanEmail)){setContactError("Revisa el formato del correo o déjalo vacío.");return false;}
   setContactError("");
   return true;
  }
