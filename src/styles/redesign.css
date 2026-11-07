@@ -223,3 +223,11 @@ body{background:#050b14;color:#edf7ff}
 .advisor-summary p{overflow-wrap:anywhere}
 .advisor-edit{align-self:center;padding:5px 8px;border:0;background:none;color:#8deaff;text-decoration:underline;text-underline-offset:3px;font:600 10px Manrope;cursor:pointer}
 .advisor-edit:hover{color:#fff}
+
+
+/* Multilingual selector */
+.language-switch{display:flex;align-items:center;gap:7px;margin-left:auto;padding:6px 9px;border:1px solid #24516f;border-radius:8px;background:#081a2a;color:#bdefff}
+.language-switch select{max-width:112px;border:0;outline:0;background:transparent;color:#dff8ff;font:600 11px Manrope,sans-serif;cursor:pointer}
+.language-switch option{background:#071523;color:#effaff}
+.language-globe{font-size:15px;color:#70ddff}
+@media(max-width:720px){.language-switch{margin-left:auto;margin-right:8px;padding:5px 7px}.language-switch select{max-width:82px;font-size:10px}.mobile-menu{margin-left:0}}
