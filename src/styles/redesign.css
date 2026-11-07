@@ -113,3 +113,19 @@ body{background:#050b14;color:#edf7ff}
  .service-detail>div:first-child{grid-template-columns:1fr}
  .service-outcome{border-left:0;border-top:1px solid #24516d}
 }
+
+
+/* Official Brionix firefly logo artwork supplied and approved by the brand owner. */
+.brand{gap:10px}
+.brand img{width:58px;height:52px;object-fit:contain;filter:drop-shadow(0 0 10px #20cfff55)}
+.brand>span{font-size:16px;letter-spacing:.19em}
+.brand small{letter-spacing:.42em}
+.hero-visual.hero-logo-lockup{height:505px;padding:10px;display:grid;place-items:center;background:radial-gradient(ellipse at 50% 52%,#063a5c 0%,#071a2c 48%,#050b14 78%);border-color:#2477a2}
+.hero-logo-image{display:block;width:100%;height:100%;object-fit:contain;position:relative;z-index:2;filter:drop-shadow(0 0 28px #00bfff18)}
+.hero-visual.hero-logo-lockup:before{background:radial-gradient(ellipse at 50% 48%,#12bfff20,transparent 62%)}
+.hero-visual.hero-logo-lockup:after{width:72%;height:72%;border-color:#22caff24;box-shadow:0 0 55px #0c9fe51a}
+@media(max-width:1000px){.hero-visual.hero-logo-lockup{height:440px}}
+@media(max-width:720px){
+ .brand img{width:48px;height:44px}
+ .hero-visual.hero-logo-lockup{height:300px;padding:6px}
+}
