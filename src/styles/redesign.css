@@ -173,3 +173,12 @@ body{background:#050b14;color:#edf7ff}
  .service-offer{min-height:0;padding:16px}
  .offer-copy h4{font-size:14px}
 }
+
+
+/* Conversion clarity: direct contact action and exact service preselection */
+.hero-whatsapp-cta{color:#b5f1ff;border-bottom:1px solid #286b8d;padding-bottom:4px}
+.hero-whatsapp-cta:hover{color:#fff;text-shadow:0 0 18px #38c9ff66}
+@media(max-width:720px){
+ .hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px}
+ .hero-whatsapp-cta{font-size:11px}
+}
