@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from "react";
-import { ArrowDownRight, ArrowUpRight, BrainCircuit, Check, ChevronDown, Code2, Compass, Layers3, Mail, Menu, Monitor, Network, PenTool, Phone, ShieldCheck, X, Zap } from "lucide-react";
+import { ArrowDownRight, ArrowUpRight, BrainCircuit, Bot, Check, ChevronDown, Code2, Compass, Layers3, Mail, Menu, MessageCircle, Monitor, Network, PenTool, Phone, ShieldCheck, Sparkles, X, Zap } from "lucide-react";
 import "./styles/globals.css";
 import "./styles/redesign.css";
 
@@ -83,6 +83,64 @@ function ContactForm({service,setService}:{service:string;setService:(value:stri
  </form>
 }
 
+
+type AdvisorOption = { label:string; value:string };
+const advisorPaths:Record<string,{service:string;question:string;options:AdvisorOption[]}> = {
+  negocio:{service:"Estrategia y consultoría",question:"¿Qué te gustaría resolver primero?",options:[{label:"Organizar o mejorar mi negocio",value:"Consultoría y estrategia"},{label:"Digitalizar ventas o inventario",value:"Sistemas de gestión y ventas"},{label:"Mejorar mi presencia digital",value:"Marketing y diseño digital"},{label:"Todavía no lo tengo claro",value:"Orientación inicial"}]},
+  creativo:{service:"Marketing y diseño digital",question:"¿Qué material necesitas?",options:[{label:"Publicaciones para redes sociales",value:"Diseño de publicaciones para redes"},{label:"Flyer, catálogo o identidad visual",value:"Flyer, catálogo o identidad visual"},{label:"Contenido para una campaña",value:"Creatividades para campañas"},{label:"Plan de contenido",value:"Calendario de contenido"}]},
+  software:{service:"Software, dashboards y automatización",question:"¿Qué solución estás buscando?",options:[{label:"Sistema para mi negocio",value:"Sistema de gestión o software a medida"},{label:"Control de inventario y ventas",value:"Inventario y ventas"},{label:"Dashboard o reportes",value:"Dashboard y reportes"},{label:"Automatizar tareas",value:"Automatización de procesos"}]},
+  comercio:{service:"Puntos de venta y tecnología comercial",question:"¿Qué necesitas para tu comercio?",options:[{label:"Punto de venta / caja",value:"Sistema TPV / POS"},{label:"Lector de códigos e impresora",value:"Escáner, impresora y periféricos"},{label:"Inventario y control de productos",value:"Inventario y control de productos"},{label:"Instalación y configuración",value:"Instalación y configuración"}]},
+  digital:{service:"Publicaciones y productos digitales",question:"¿Qué quieres crear?",options:[{label:"Un ebook o libro",value:"Ebook o libro"},{label:"Un manual o guía",value:"Manual o guía"},{label:"Un catálogo digital",value:"Catálogo digital"},{label:"Publicar en Amazon KDP",value:"Publicación Amazon KDP"}]},
+  soporte:{service:"Soporte y reparación de computadoras",question:"¿Qué sucede con tu equipo?",options:[{label:"Está lento o falla",value:"Equipo lento o con fallas"},{label:"Necesita mantenimiento",value:"Mantenimiento preventivo"},{label:"Quiero ampliar RAM o SSD",value:"Actualización de componentes"},{label:"Necesito instalar o configurar",value:"Instalación y configuración"}]},
+  ia:{service:"Inteligencia artificial e investigación",question:"¿Qué te interesa explorar?",options:[{label:"Un asistente con IA",value:"Asistente con IA"},{label:"Automatizar un proceso con IA",value:"Automatización con IA"},{label:"Conectar modelos y herramientas",value:"Integración de modelos y herramientas"},{label:"Diseñar agentes",value:"Arquitectura de agentes"}]}
+};
+function VirtualAdvisor(){
+ const [open,setOpen]=useState(false);
+ const [step,setStep]=useState<"start"|"path"|"detail"|"contact"|"done">("start");
+ const [path,setPath]=useState("");
+ const [need,setNeed]=useState("");
+ const [detail,setDetail]=useState("");
+ const [business,setBusiness]=useState("");
+ const [name,setName]=useState("");
+ const [phone,setPhone]=useState("");
+ const [email,setEmail]=useState("");
+ const [sent,setSent]=useState(false);
+ const [contactError,setContactError]=useState("");
+ const selected=advisorPaths[path];
+ function validateContact(){
+  const cleanName=name.trim();
+  const digits=phone.replace(/\D/g,"");
+  const cleanEmail=email.trim();
+  if(cleanName.length<2){setContactError("Escribe tu nombre (al menos 2 caracteres).");return false;}
+  if(digits.length<10||digits.length>15||/^([0-9])\1+$/.test(digits)){setContactError("Ingresa un WhatsApp válido con lada. Usa entre 10 y 15 dígitos.");return false;}
+  if(cleanEmail&&!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(cleanEmail)){setContactError("Revisa el formato del correo o déjalo vacío.");return false;}
+  setContactError("");
+  return true;
+ }
+ function choosePath(value:string){setPath(value);setStep("path")}
+ function chooseNeed(value:string){setNeed(value);setStep("detail")}
+ function buildWhatsApp(){
+  const message=["Hola, Brionix Systems. El Asesor Virtual me ayudó a preparar esta solicitud.","Nombre: "+(name||"Por proporcionar"),"WhatsApp: "+(phone||"Por proporcionar"),"Correo: "+(email||"No proporcionado"),"Tipo de negocio: "+(business||"No especificado"),"Área: "+(selected?.service||"Orientación general"),"Necesidad: "+(need||"Por definir"),"Detalles: "+(detail||"Solicito orientación inicial.")].join("\n");
+  return "https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(message);
+ }
+ return <div className="advisor-widget">
+  {open&&<section className="advisor-panel" aria-label="Asesor virtual Brionix">
+   <header className="advisor-header"><div className="advisor-avatar"><Bot size={20}/></div><div><strong>Asesor Brionix</strong><span><i/> Asesor virtual · Gratuito</span></div><button type="button" aria-label="Cerrar asesor" onClick={()=>setOpen(false)}><X size={18}/></button></header>
+   <div className="advisor-messages" aria-live="polite">
+    <div className="advisor-bubble advisor-bot">¡Hola! Soy el asesor virtual de Brionix Systems. Te ayudaré a encontrar el servicio adecuado y preparar una solicitud para nuestro equipo.</div>
+    {step!=="start"&&<div className="advisor-bubble advisor-user">{({negocio:"Quiero mejorar mi negocio",creativo:"Marketing y diseño",software:"Software y automatización",comercio:"Punto de venta y comercio",digital:"Ebooks y publicaciones",soporte:"Soporte de computadora",ia:"Inteligencia artificial"} as Record<string,string>)[path]}</div>}
+    {step==="start"&&<><div className="advisor-bubble advisor-bot">¿En qué podemos ayudarte?</div><div className="advisor-options">{[{label:"Mi negocio",value:"negocio"},{label:"Marketing y diseño",value:"creativo"},{label:"Software y automatización",value:"software"},{label:"Punto de venta / comercio",value:"comercio"},{label:"Ebooks y publicaciones",value:"digital"},{label:"Soporte de computadora",value:"soporte"},{label:"Inteligencia artificial",value:"ia"}].map(o=><button key={o.value} onClick={()=>choosePath(o.value)}>{o.label}<ArrowUpRight size={13}/></button>)}</div></>}
+    {step==="path"&&selected&&<><div className="advisor-bubble advisor-bot">{selected.question}</div><div className="advisor-options">{selected.options.map(o=><button key={o.value} onClick={()=>chooseNeed(o.value)}>{o.label}<ArrowUpRight size={13}/></button>)}</div></>}
+    {step==="detail"&&<><div className="advisor-bubble advisor-user">{need}</div><div className="advisor-bubble advisor-bot">Perfecto. Cuéntame brevemente qué necesitas, qué problema quieres resolver o qué resultado esperas.</div><label className="advisor-field"><span>Detalles del proyecto</span><textarea value={detail} onChange={e=>setDetail(e.target.value)} rows={3} placeholder="Por ejemplo: tengo una tienda y necesito controlar productos y ventas."/></label><button className="advisor-next" onClick={()=>setStep("contact")}>Continuar <ArrowUpRight size={15}/></button></>}
+    {step==="contact"&&<><div className="advisor-bubble advisor-bot">Ya casi está. Comparte tus datos para preparar el mensaje. Solo se enviarán a WhatsApp cuando tú pulses el botón.</div><label className="advisor-field"><span>Nombre <b aria-hidden="true">*</b></span><input value={name} onChange={e=>{setName(e.target.value);setContactError("");}} placeholder="Tu nombre" autoComplete="name" required maxLength={80}/></label><label className="advisor-field"><span>Negocio (opcional)</span><input value={business} onChange={e=>setBusiness(e.target.value)} placeholder="Ej. Dulcería, taller, profesional" maxLength={100}/></label><label className="advisor-field"><span>WhatsApp de contacto <b aria-hidden="true">*</b></span><input type="tel" inputMode="tel" autoComplete="tel" value={phone} onChange={e=>{setPhone(e.target.value);setContactError("");}} placeholder="+52 55 1234 5678" required maxLength={24}/></label><label className="advisor-field"><span>Correo (opcional)</span><input type="email" autoComplete="email" value={email} onChange={e=>{setEmail(e.target.value);setContactError("");}} placeholder="nombre@correo.com" maxLength={120}/></label>{contactError&&<p className="advisor-error" role="alert">{contactError}</p>}<p className="advisor-required-note">* Datos necesarios para que nuestro equipo pueda contactarte.</p><button className="advisor-next" onClick={()=>{if(validateContact())setStep("done");}}>Revisar solicitud <ArrowUpRight size={15}/></button></>}
+    {step==="done"&&<><div className="advisor-bubble advisor-bot">¡Listo! Preparé el resumen de tu necesidad. Revisa el mensaje antes de enviarlo a Brionix por WhatsApp.</div><div className="advisor-summary"><span>REVISA TU SOLICITUD ANTES DE ENVIAR</span><strong>{selected?.service||"Orientación inicial"}</strong><p><b>Necesidad:</b> {need}</p><p><b>Nombre:</b> {name.trim()}</p><p><b>WhatsApp:</b> {phone.trim()}</p>{email.trim()&&<p><b>Correo:</b> {email.trim()}</p>}{business.trim()&&<p><b>Negocio:</b> {business.trim()}</p>}<small><b>Detalles:</b> {detail.trim()||"Solicito orientación inicial."}</small></div><p className="advisor-review-note">Verifica que tus datos sean correctos. WhatsApp se abrirá únicamente cuando pulses el botón.</p><button className="advisor-edit" type="button" onClick={()=>setStep("contact")}>Editar mis datos</button><a className="advisor-send" href={buildWhatsApp()} target="_blank" rel="noreferrer" onClick={()=>setSent(true)}><MessageCircle size={16}/> {sent?"Abrir WhatsApp nuevamente":"Confirmar y abrir WhatsApp"}</a><button className="advisor-reset" onClick={()=>{setStep("start");setPath("");setNeed("");setDetail("");setBusiness("");setName("");setPhone("");setEmail("");setSent(false);setContactError("")}}>Iniciar otra consulta</button></>}
+   </div>
+   <footer className="advisor-footer"><Sparkles size={12}/> Orientación inicial gratuita · Sin registro</footer>
+  </section>}
+  <button className="advisor-launcher" type="button" onClick={()=>setOpen(v=>!v)} aria-label={open?"Cerrar asesor virtual":"Abrir asesor virtual"}>{open?<X size={22}/>:<><MessageCircle size={21}/><span>¿Te ayudamos?</span></>}</button>
+ </div>
+}
+
 export default function App(){
  const [menuOpen,setMenuOpen]=useState(false);
  const [expanded,setExpanded]=useState<string|null>(null);
@@ -107,6 +165,6 @@ export default function App(){
 
    <section className="contact-section section" id="contacto"><div className="container"><div className="section-top"><span>05 / CONTACTO</span><span>EL PRÓXIMO PASO EMPIEZA CON UNA CONVERSACIÓN</span></div><div className="contact-grid"><div className="contact-copy"><p className="eyebrow">HABLEMOS DE TU PROYECTO</p><h2>Cuéntanos el reto.<em> Diseñemos el siguiente paso.</em></h2><p>Cuéntanos qué necesitas y te ayudaremos a encontrar la solución adecuada. Sin complicaciones y con expectativas claras.</p><a className="contact-line" href={"https://wa.me/"+WHATSAPP} target="_blank" rel="noreferrer"><Phone/><span><small>WHATSAPP</small>+52 55 3810 7582</span><ArrowUpRight/></a><a className="contact-line" href={"mailto:"+EMAIL}><Mail/><span><small>CORREO</small>{EMAIL}</span><ArrowUpRight/></a></div><ContactForm service={inquiryService} setService={setInquiryService}/></div></div></section>
   </main>
-  <footer className="footer"><div className="container footer-main"><Brand/><p>Ideas into systems.<br/>Technology · Intelligence · Growth</p><a href="#inicio">VOLVER AL INICIO ↑</a></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} BRIONIX SYSTEMS. TODOS LOS DERECHOS RESERVADOS.</span><span>TECNOLOGÍA CON PROPÓSITO.</span></div></footer>
+  <VirtualAdvisor/>\n  <footer className="footer"><div className="container footer-main"><Brand/><p>Ideas into systems.<br/>Technology · Intelligence · Growth</p><a href="#inicio">VOLVER AL INICIO ↑</a></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} BRIONIX SYSTEMS. TODOS LOS DERECHOS RESERVADOS.</span><span>TECNOLOGÍA CON PROPÓSITO.</span></div></footer>
  </div>
 }
