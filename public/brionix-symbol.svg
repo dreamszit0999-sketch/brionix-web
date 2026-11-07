@@ -1,11 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
-<title id="title">Brionix Systems — símbolo B y luciérnaga</title><desc id="desc">Monograma geométrico B en plata con un trazo orbital dorado y un punto de luz que representa una luciérnaga.</desc>
-<defs><linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset=".48" stop-color="#aebbc0"/><stop offset="1" stop-color="#596a70"/></linearGradient><linearGradient id="amber" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffe5ad"/><stop offset=".55" stop-color="#e9ad55"/><stop offset="1" stop-color="#a9682c"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
-<path d="M58 38H132C169 38 188 57 188 87C188 108 177 122 158 130C184 138 198 156 198 181C198 215 174 232 135 232H58Z" fill="none" stroke="url(#metal)" stroke-width="13" stroke-linejoin="round"/>
-<path d="M91 69H132C151 69 159 77 159 90C159 105 148 112 129 112H91M91 145H136C157 145 169 153 169 170C169 187 157 199 136 199H91" fill="none" stroke="url(#metal)" stroke-width="11" stroke-linecap="square"/>
-<path d="M26 167C17 104 61 66 111 75C151 82 169 115 202 106C222 100 222 78 207 61" fill="none" stroke="url(#amber)" stroke-width="5" stroke-linecap="round"/>
-<path d="M197 57Q178 31 192 20Q210 11 222 34Q225 50 208 63Z" fill="#b6d2dc" fill-opacity=".35" stroke="url(#amber)" stroke-width="2"/>
-<path d="M199 54 192 20 207 39 222 34M199 54 178 40M207 39 217 20" fill="none" stroke="#dce8e9" stroke-opacity=".8" stroke-width="1.5"/>
-<circle cx="207" cy="48" r="5" fill="#ffe2a0" filter="url(#glow)"/><path d="M207 59 219 71" stroke="url(#amber)" stroke-width="2" stroke-linecap="round"/>
-<circle cx="219" cy="71" r="2.5" fill="#ffe2a0" filter="url(#glow)"/>
+<title id="title">Brionix Systems — luciérnaga de inteligencia</title>
+<desc id="desc">Luciérnaga futurista con alas holográficas azul eléctrico y cian, cuerpo estilizado y abdomen ámbar luminoso.</desc>
+<defs>
+ <linearGradient id="wing" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e6fbff" stop-opacity=".92"/><stop offset=".38" stop-color="#54d7ff" stop-opacity=".62"/><stop offset="1" stop-color="#1679d1" stop-opacity=".08"/></linearGradient>
+ <linearGradient id="wing2" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#8deaff" stop-opacity=".08"/><stop offset=".55" stop-color="#3ac6ff" stop-opacity=".55"/><stop offset="1" stop-color="#d7faff" stop-opacity=".88"/></linearGradient>
+ <linearGradient id="body" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f1fcff"/><stop offset=".38" stop-color="#6e9db9"/><stop offset="1" stop-color="#1a4565"/></linearGradient>
+ <radialGradient id="amber"><stop stop-color="#fff9d6"/><stop offset=".24" stop-color="#ffe29a"/><stop offset=".58" stop-color="#ffb33f"/><stop offset="1" stop-color="#ff8b28" stop-opacity=".05"/></radialGradient>
+ <filter id="blueGlow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <filter id="amberGlow" x="-150%" y="-150%" width="400%" height="400%"><feGaussianBlur stdDeviation="11" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M113 105C78 46 30 35 22 62C14 90 49 117 105 126C65 126 38 145 48 163C60 185 95 159 121 130" fill="url(#wing)" stroke="#8deaff" stroke-width="2.2" filter="url(#blueGlow)"/>
+ <path d="M127 105C162 46 210 35 218 62C226 90 191 117 135 126C175 126 202 145 192 163C180 185 145 159 119 130" fill="url(#wing2)" stroke="#8deaff" stroke-width="2.2" filter="url(#blueGlow)"/>
+ <path d="M111 110C78 70 51 61 31 67M108 119C74 113 58 104 42 88M129 110C162 70 189 61 209 67M132 119C166 113 182 104 198 88" stroke="#c8f7ff" stroke-opacity=".75" stroke-width="1.2"/>
+ <path d="M112 110C93 85 76 78 57 77M128 110C147 85 164 78 183 77" stroke="#43cfff" stroke-opacity=".8" stroke-width="1"/>
+ <path d="M113 113C102 97 98 80 103 66M127 113C138 97 142 80 137 66" stroke="#7be2ff" stroke-width="2"/>
+ <path d="M115 111Q120 101 125 111L132 151Q120 166 108 151Z" fill="url(#body)" stroke="#b8efff" stroke-width="1.4"/>
+ <ellipse cx="120" cy="93" rx="10" ry="12" fill="url(#body)" stroke="#c9f6ff" stroke-width="1.4"/>
+ <path d="M115 84Q103 68 99 61M125 84Q137 68 141 61" stroke="#8deaff" stroke-width="1.8"/>
+ <circle cx="99" cy="60" r="2.5" fill="#8deaff"/><circle cx="141" cy="60" r="2.5" fill="#8deaff"/>
+ <path d="M111 151Q120 164 129 151" stroke="#8deaff" stroke-width="1.5"/>
+ <path d="M111 148Q120 183 120 191Q120 183 129 148" stroke="#6bcfff" stroke-width="2"/>
+ <ellipse cx="120" cy="190" rx="16" ry="21" fill="url(#amber)" stroke="#ffc66d" stroke-width="1.5" filter="url(#amberGlow)"/>
+ <ellipse cx="120" cy="190" rx="7" ry="10" fill="#fff0b5" filter="url(#amberGlow)"/>
+ <path d="M101 180Q78 190 65 211M139 180Q162 190 175 211" stroke="#38c9ff" stroke-opacity=".7" stroke-width="1.2"/>
+ <path d="M120 214V228M113 222H127" stroke="#ffbd55" stroke-width="1.4" filter="url(#blueGlow)"/>
+</g>
+<circle cx="120" cy="190" r="3" fill="#fff8d9"/>
 </svg>
