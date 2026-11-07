@@ -8,7 +8,6 @@ const messages: Record<Locale, Record<string, string>> = {
   es: {
 },
   en: {
-    "+ [código país] [número]": "+ [country code] [number]",
     "Nosotros":"About", "Servicios":"Services", "Proyectos":"Projects", "Cómo trabajamos":"How we work", "Contacto":"Contact",
     "Hablemos":"Let's talk", "Cerrar menú":"Close menu", "Abrir menú":"Open menu",
     "La tecnología debe resolver algo.":"Technology should solve something.", " Hagamos que suceda.":" Let's make it happen.",
@@ -43,6 +42,7 @@ const messages: Record<Locale, Record<string, string>> = {
     "Abrir WhatsApp":"Open WhatsApp", "Alianzas y nuevos proyectos":"Partnerships and new projects",
     "VOLVER AL INICIO ↑":"BACK TO TOP ↑", "TODOS LOS DERECHOS RESERVADOS.":"ALL RIGHTS RESERVED.",
   },
+    "+ [código país] [número]": "+ [country code] [number]",
     "Seleccionar idioma": "Select language",
     "Emblema oficial de luciérnaga Brionix Systems": "Official Brionix Systems firefly emblem",
     "RESEARCH / 001": "RESEARCH / 001",
@@ -290,7 +290,6 @@ const messages: Record<Locale, Record<string, string>> = {
     "Unas líneas bastan para entender el reto y orientarte.":"A few lines are enough to understand your challenge and guide you.",
     "TECNOLOGÍA CON PROPÓSITO.":"TECHNOLOGY WITH PURPOSE."
   zh: {
-    "+ [código país] [número]": "+ [国家代码] [号码]",
     "Nosotros":"关于我们", "Servicios":"服务", "Proyectos":"项目", "Cómo trabajamos":"工作方式", "Contacto":"联系",
     "Hablemos":"联系我们", "Cerrar menú":"关闭菜单", "Abrir menú":"打开菜单",
     "La tecnología debe resolver algo.":"科技应该解决实际问题。", " Hagamos que suceda.":" 让我们把它变成现实。",
@@ -325,6 +324,7 @@ const messages: Record<Locale, Record<string, string>> = {
     "Abrir WhatsApp":"打开 WhatsApp", "Alianzas y nuevos proyectos":"合作与新项目",
     "VOLVER AL INICIO ↑":"返回顶部 ↑", "TODOS LOS DERECHOS RESERVADOS.":"版权所有。",
   },
+    "+ [código país] [número]": "+ [国家代码] [号码]",
     "Seleccionar idioma": "选择语言",
     "Emblema oficial de luciérnaga Brionix Systems": "Brionix Systems 官方萤火虫标志",
     "RESEARCH / 001": "研究 / 001",
@@ -572,7 +572,6 @@ const messages: Record<Locale, Record<string, string>> = {
     "Unas líneas bastan para entender el reto y orientarte.":"简单描述即可帮助我们理解问题并提供建议。",
     "TECNOLOGÍA CON PROPÓSITO.":"让科技创造价值。"
   de: {
-    "+ [código país] [número]": "+ [Ländervorwahl] [Rufnummer]",
     "Nosotros":"Über uns", "Servicios":"Leistungen", "Proyectos":"Projekte", "Cómo trabajamos":"Arbeitsweise", "Contacto":"Kontakt",
     "Hablemos":"Sprechen wir", "Cerrar menú":"Menü schließen", "Abrir menú":"Menü öffnen",
     "La tecnología debe resolver algo.":"Technologie soll Probleme lösen.", " Hagamos que suceda.":" Machen wir es möglich.",
@@ -607,6 +606,7 @@ const messages: Record<Locale, Record<string, string>> = {
     "Abrir WhatsApp":"WhatsApp öffnen", "Alianzas y nuevos proyectos":"Partnerschaften und neue Projekte",
     "VOLVER AL INICIO ↑":"ZUM ANFANG ↑", "TODOS LOS DERECHOS RESERVADOS.":"ALLE RECHTE VORBEHALTEN.",
   }
+    "+ [código país] [número]": "+ [Ländervorwahl] [Rufnummer]",
     "Seleccionar idioma": "Sprache auswählen",
     "Emblema oficial de luciérnaga Brionix Systems": "Offizielles Glühwürmchen-Emblem von Brionix Systems",
     "RESEARCH / 001": "FORSCHUNG / 001",
