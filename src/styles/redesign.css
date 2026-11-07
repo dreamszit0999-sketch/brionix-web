@@ -231,3 +231,9 @@ body{background:#050b14;color:#edf7ff}
 .language-switch option{background:#071523;color:#effaff}
 .language-globe{font-size:15px;color:#70ddff}
 @media(max-width:720px){.language-switch{margin-left:auto;margin-right:8px;padding:5px 7px}.language-switch select{max-width:82px;font-size:10px}.mobile-menu{margin-left:0}}
+
+
+/* Multilingual typography support */
+:lang(zh), :lang(zh) input, :lang(zh) textarea, :lang(zh) button, :lang(zh) select{font-family:"Noto Sans SC","Microsoft YaHei","PingFang SC",sans-serif}
+:lang(de) .service-title strong,:lang(de) .service-title em,:lang(de) .offer-copy h4,:lang(de) .section-heading h2{overflow-wrap:anywhere;hyphens:auto}
+.language-switch select{min-width:0}
