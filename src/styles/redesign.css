@@ -11,3 +11,81 @@
 @media(max-width:1000px){.container{width:calc(100% - 56px)}.hero{gap:30px}.hero-visual{height:440px}.hero h1{font-size:clamp(40px,5vw,58px)}.nav-links{gap:19px}.service-detail{padding-left:120px;padding-right:40px}.contact-grid{gap:40px}}
 @media(max-width:720px){.container{width:calc(100% - 36px)}.topbar{height:70px}.brand img{width:38px;height:38px}.brand>span{font-size:15px}.mobile-menu{display:block;margin-left:auto;padding:8px}.nav-cta{display:none}.nav-links{display:none;position:absolute;top:70px;left:0;right:0;padding:22px 24px 26px;background:#0d1113;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:22px}.nav-links.open{display:flex}.hero{display:flex;flex-direction:column;align-items:stretch;gap:32px;padding:55px 0 25px;min-height:0}.hero h1{font-size:clamp(42px,11vw,58px)}.hero-lead{font-size:14px;margin:22px 0 25px}.hero-proof{gap:13px;margin-top:35px}.hero-proof span{font-size:9px}.hero-visual{height:370px;padding:17px}.visual-monogram{inset:55px 25px 72px}.visual-bottom strong{font-size:17px}.visual-bottom span{font-size:6px}.hero-ribbon{overflow:auto;justify-content:flex-start;white-space:nowrap;font-size:8px;padding:17px 0}.section{padding:76px 0}.section-top{font-size:7px;margin-bottom:34px}.about-grid{grid-template-columns:1fr;gap:23px}.about-grid h2,.section-heading h2,.contact-copy h2{font-size:clamp(38px,10vw,49px)}.about-copy p{font-size:12px}.purpose-grid{grid-template-columns:1fr;margin-top:35px}.purpose-card{min-height:0;padding:25px}.purpose-card h3{font-size:22px}.principles{grid-template-columns:1fr 1fr;gap:20px}.section-heading{display:block;margin-bottom:27px}.section-heading>p{margin-top:17px;font-size:12px}.service-trigger{grid-template-columns:32px 42px 1fr 20px;gap:10px;padding:20px 2px}.service-icon{width:37px;height:37px}.service-title strong{font-size:17px}.service-title em{font-size:10px;line-height:1.5}.service-title small{font-size:7px}.service-action{font-size:0}.service-action svg{width:18px}.service-detail{grid-template-columns:1fr;gap:18px;padding:5px 15px 25px 84px}.project-grid{grid-template-columns:1fr}.project-art{height:180px}.project-content p{min-height:0}.research-note{grid-template-columns:45px 1fr;gap:15px;padding:18px}.research-symbol{width:42px;height:42px}.research-note h3{font-size:15px}.research-note>a{grid-column:2;white-space:normal}.contact-grid{grid-template-columns:1fr;gap:30px}.contact-copy>p:not(.eyebrow){font-size:12px;margin:18px 0 25px}.contact-form{padding:22px 17px}.form-intro h3{font-size:22px}.form-grid{grid-template-columns:1fr;gap:0}.footer-main{align-items:flex-start;flex-direction:column;gap:15px;padding:28px 0}.footer-bottom{flex-direction:column;font-size:7px;line-height:1.7}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+
+
+
+/* BRIONIX SYSTEMS — FIRE FLY IDENTITY / APPROVED BRAND DIRECTION */
+:root{
+ --bg:#050b14;--panel:#091625;--panel2:#0d2033;--ink:#edf7ff;
+ --muted:#a9bdcd;--dim:#7892a8;--line:#1b3a55;
+ --gold:#37c8ff;--gold2:#91e8ff;--blue:#55c7ff;
+ --firefly-amber:#ffbd55;--electric:#32c7ff;--electric-soft:#91e8ff;
+}
+body{background:#050b14;color:#edf7ff}
+.site-shell{background:radial-gradient(ellipse at 78% 7%,#0a4a7540,transparent 38%),radial-gradient(ellipse at 12% 35%,#0a2b4a22,transparent 32%),#050b14}
+.topbar{background:#050b14ed;border-color:#18364f}
+.brand img{width:48px;height:48px;filter:drop-shadow(0 0 12px #36c8ff45)}
+.brand>span{color:#eaf7ff;letter-spacing:.18em}
+.brand small{color:#91aabd}
+.nav-links a:hover,.footer a:hover{color:#91e8ff}
+.nav-cta{border-color:#286083;color:#a8edff}
+.eyebrow,.hero-proof svg,.purpose-icon,.service-number,.service-icon,.service-action,.detail-caption,.service-detail p svg,.service-outcome a,.project-content>a,.research-note>a,.contact-line>svg:first-child,.contact-line>svg:last-child,.contact-line small,.form-notice{color:#75dcff}
+.eyebrow-rule{background:#38c9ff}
+.button-primary{background:linear-gradient(110deg,#8deaff,#25aeea);border-color:#6bdcff;color:#041321;box-shadow:0 0 24px #27bfff22}
+.button-primary:hover{filter:brightness(1.1);box-shadow:0 0 30px #27bfff45}
+.text-link{color:#91e8ff}
+.hero-proof{border-color:#1d3e59}
+.hero-proof svg{color:#55d6ff}
+.hero-visual{border-color:#286087;background:radial-gradient(ellipse at 50% 45%,#07528b55,transparent 57%),linear-gradient(145deg,#0b2036,#050b14 72%)}
+.hero-visual:before{background:linear-gradient(120deg,transparent 0 49.8%,#35c8ff20 50%,transparent 50.2%),linear-gradient(30deg,transparent 0 49.8%,#9edfff13 50%,transparent 50.2%)}
+.hero-visual:after{border-color:#35c8ff40;box-shadow:0 0 60px #0c9fe522}
+.visual-meta,.visual-bottom{color:#91afc5}
+.visual-bottom strong{font-size:clamp(13px,1.4vw,19px);color:#e9f8ff;max-width:72%;line-height:1.3}
+.visual-index span{color:#ffbd55}
+.hero-ribbon i{background:#43d0ff}
+.about-section{background:#071321;border-color:#18354e}
+.purpose-card{background:linear-gradient(145deg,#0c2033,#081522);border-color:#1e4967}
+.vision-card{background:linear-gradient(145deg,#0b263d,#091522);border-color:#27658a}
+.purpose-icon{border-color:#27658a;color:#65d8ff}
+.purpose-label{color:#8aa8bd}
+.principles{border-color:#1b3b55}
+.principles span{color:#5dd5ff}
+.principles b{color:#b7ccda}
+.services-section{background:#050d18}
+.service-list,.service-item{border-color:#1d3f5a}
+.service-trigger:hover,.expanded .service-trigger{background:#0a1c2e}
+.service-icon{border-color:#27658a;color:#65d8ff}
+.service-title small{color:#67cde9}
+.service-action{color:#8ce8ff}
+.service-detail{background:#091a2a}
+.detail-caption{color:#62d8ff}
+.projects-section{background:#081523;border-color:#1c3b54}
+.project-card{background:#071321;border-color:#1c4664}
+.project-art{background:radial-gradient(ellipse at center,#0d4a6b66,transparent 64%),linear-gradient(145deg,#102c43,#071321)}
+.project-art:before,.project-art:after{border-color:#43cfff55}
+.project-art>span,.project-art>small{color:#9ec9dd}
+.project-glyph{border-color:#42cfff;color:#7de4ff;background:#071a2b;box-shadow:0 0 24px #22b9ef18}
+.project-digital .project-glyph,.project-commerce .project-glyph{border-color:#3989ad;color:#9eeaff}
+.project-content .eyebrow{color:#69d9ff}
+.project-content p{color:#a9bdcd}
+.research-note{background:linear-gradient(110deg,#0b2236,#081522);border-color:#28658a}
+.research-symbol{border-color:#328bb6;color:#7ce2ff}
+.research-note h3{color:#e5f6ff}
+.research-note p{color:#a9c0d1}
+.contact-section{background:#061321}
+.contact-form{background:linear-gradient(145deg,#0b1d30,#071321);border-color:#24516f}
+.form-intro .eyebrow{color:#70ddff}
+.contact-form input,.contact-form select,.contact-form textarea{background:#061321;border-color:#25445c;color:#effaff}
+.contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{border-color:#4bd3ff;box-shadow:0 0 0 2px #36c8ff20}
+.form-privacy{color:#819db2}
+.footer{background:#030912;border-color:#18364f}
+.footer-main>a:last-child{color:#80e1ff}
+.footer-bottom{border-color:#17334b;color:#7894a9}
+@media(max-width:720px){
+ .brand img{width:42px;height:42px}
+ .nav-links{background:#071625;border-color:#1d405b}
+ .hero-visual{border-color:#286087}
+ .service-detail{background:#091a2a}
+ .contact-form{background:#091a2a}
+}
+/* The warm amber is reserved for the living light of the firefly, not the interface. */
