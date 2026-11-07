@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#090b0d"/><path d="M17 11H37C47 11 52 16 52 25C52 31 48 35 42 37C50 39 54 44 54 51C54 59 48 62 37 62H17Z" fill="none" stroke="#d8e0df" stroke-width="4" stroke-linejoin="round"/><path d="M27 23H37C42 23 43 26 43 29C43 33 40 34 35 34H27M27 43H38C43 43 45 46 45 50C45 54 42 56 37 56H27" fill="none" stroke="#d8e0df" stroke-width="3"/><path d="M8 44C5 26 17 17 30 22C41 26 48 37 56 30" fill="none" stroke="#e9ad55" stroke-width="3" stroke-linecap="round"/><circle cx="50" cy="17" r="5" fill="#f5cb83"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<defs><radialGradient id="a"><stop stop-color="#fff8d7"/><stop offset=".38" stop-color="#ffc15a"/><stop offset="1" stop-color="#ff9a31"/></radialGradient><linearGradient id="w"><stop stop-color="#e8fcff"/><stop offset=".55" stop-color="#42caff"/><stop offset="1" stop-color="#176bb5"/></linearGradient></defs>
+<rect width="64" height="64" rx="14" fill="#050b14"/>
+<g fill="none" stroke="url(#w)" stroke-width="2" stroke-linejoin="round"><path d="M29 27C18 8 5 12 8 22C10 29 19 33 29 34C17 35 12 44 19 48C23 50 28 43 32 36M35 27C46 8 59 12 56 22C54 29 45 33 35 34C47 35 52 44 45 48C41 50 36 43 32 36"/></g>
+<path d="M30 28Q32 23 34 28L37 43Q32 48 27 43Z" fill="#9bdff5" stroke="#e2faff"/>
+<ellipse cx="32" cy="51" rx="6" ry="8" fill="url(#a)"/>
+<circle cx="32" cy="51" r="2.5" fill="#fff6d6"/>
+</svg>
