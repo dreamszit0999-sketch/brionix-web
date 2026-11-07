@@ -1,7 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-<defs><linearGradient id="w" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e7fbff"/><stop offset=".5" stop-color="#42caff"/><stop offset="1" stop-color="#1678bd"/></linearGradient><radialGradient id="l"><stop stop-color="#fffce3"/><stop offset=".4" stop-color="#ffc35e"/><stop offset="1" stop-color="#ff9835"/></radialGradient></defs>
-<rect width="64" height="64" rx="15" fill="#050b14"/>
-<g fill="url(#w)" stroke="#9deaff" stroke-width="1.1"><path d="M29 27C20 10 7 9 6 17C5 25 17 32 29 34Z"/><path d="M35 27C44 10 57 9 58 17C59 25 47 32 35 34Z"/><path d="M29 33C18 34 13 43 19 47C23 49 28 42 32 36Z"/><path d="M35 33C46 34 51 43 45 47C41 49 36 42 32 36Z"/></g>
-<path d="M29 29Q32 25 35 29L37 43Q32 48 27 43Z" fill="#b8d6e6" stroke="#e9fbff"/>
-<ellipse cx="32" cy="50" rx="6" ry="8" fill="url(#l)"/><circle cx="32" cy="50" r="2" fill="#fffce5"/>
+<defs><linearGradient id="w" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eaffff"/><stop offset=".5" stop-color="#43caff"/><stop offset="1" stop-color="#176cae"/></linearGradient><radialGradient id="g"><stop stop-color="#fffde7"/><stop offset=".4" stop-color="#ffc15b"/><stop offset="1" stop-color="#ff9a30" stop-opacity="0"/></radialGradient></defs>
+<rect width="64" height="64" rx="13" fill="#050b14"/>
+<g fill="none" stroke="url(#w)" stroke-width="2" stroke-linejoin="round"><path d="M29 27Q15 8 7 15Q5 24 28 34L11 32Q7 39 25 39M35 27Q49 8 57 15Q59 24 36 34L53 32Q57 39 39 39"/></g>
+<path d="M30 23Q32 20 34 23L36 43Q32 48 28 43Z" fill="#a9c8d8" stroke="#e4fbff" stroke-width="1"/>
+<path d="M30 42Q32 45 34 42L35 52Q32 57 29 52Z" fill="url(#g)" stroke="#ffc66f"/>
+<circle cx="32" cy="50" r="2" fill="#fffbe5"/>
 </svg>
