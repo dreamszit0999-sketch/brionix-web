@@ -57,6 +57,7 @@ const projects = [
 function Brand(){return <a className="brand" href="#inicio" aria-label="Brionix Systems, inicio"><img src="/brionix-symbol-approved.png" alt="Emblema oficial de luciérnaga Brionix Systems" /><span>BRIONIX<small>SYSTEMS</small></span></a>}
 
 function ContactForm({service,setService,locale,t}:{service:string;setService:(value:string)=>void;locale:Locale;t:(value:string)=>string}){
+ void locale; void t;
 
  const [name,setName]=useState("");
  const [email,setEmail]=useState("");
@@ -96,6 +97,7 @@ const advisorPaths:Record<string,{service:string;question:string;options:Advisor
   ia:{service:"Inteligencia artificial e investigación",question:"¿Qué te interesa explorar?",options:[{label:"Un asistente con IA",value:"Asistente con IA"},{label:"Automatizar un proceso con IA",value:"Automatización con IA"},{label:"Conectar modelos y herramientas",value:"Integración de modelos y herramientas"},{label:"Diseñar agentes",value:"Arquitectura de agentes"}]}
 };
 function VirtualAdvisor({locale,t}:{locale:Locale;t:(value:string)=>string}){
+ void locale; void t;
  const [open,setOpen]=useState(false);
  const [step,setStep]=useState<"start"|"path"|"detail"|"contact"|"done">("start");
  const [path,setPath]=useState("");
@@ -146,7 +148,7 @@ export default function App(){
  const initialLocale=():Locale=>{const path=window.location.pathname.split("/")[1];if(path==="en"||path==="zh"||path==="de"||path==="es")return path;const saved=window.localStorage.getItem("brionix-locale");if(saved==="en"||saved==="zh"||saved==="de"||saved==="es")return saved;const browser=window.navigator.language.toLowerCase();return browser.startsWith("zh")?"zh":browser.startsWith("de")?"de":browser.startsWith("en")?"en":"es";};
  const [locale,setLocale]=useState<Locale>(initialLocale);
  const t=(value:string)=>translate(locale,value);
- useEffect(()=>{document.documentElement.lang=locale==="zh"?"zh-CN":locale==="es"?"es-MX":locale;document.title=locale==="en"?"BRIONIX SYSTEMS | Technology, intelligence and integration":locale==="zh"?"BRIONIX SYSTEMS | 科技、智能与集成":locale==="de"?"BRIONIX SYSTEMS | Technologie, Intelligenz und Integration":"BRIONIX SYSTEMS | Tecnología, inteligencia e integración";window.localStorage.setItem("brionix-locale",locale);const target=locale==="es"?"/es/":`/${locale}/`;if(window.location.pathname!==target)window.history.replaceState({}, "", target);},[locale]);
+ useEffect(()=>{document.documentElement.lang=locale==="zh"?"zh-CN":locale==="es"?"es-MX":locale;document.title=locale==="en"?"BRIONIX SYSTEMS | Technology, intelligence and integration":locale==="zh"?"BRIONIX SYSTEMS | 科技、智能与集成":locale==="de"?"BRIONIX SYSTEMS | Technologie, Intelligenz und Integration":"BRIONIX SYSTEMS | Tecnología, inteligencia e integración";const description=document.querySelector<HTMLMetaElement>(`meta[name="description"]`);if(description)description.content=locale==="en"?"Digital design, software, business systems and AI solutions.":locale==="zh"?"数字设计、软件、商业系统与人工智能解决方案。":locale==="de"?"Digitales Design, Software, Geschäftssysteme und KI-Lösungen.":"Diseño digital, software, sistemas comerciales y soluciones de IA.";window.localStorage.setItem("brionix-locale",locale);const target=locale==="es"?"/es/":`/${locale}/`;if(window.location.pathname!==target)window.history.replaceState({}, "", target);},[locale]);
  const [menuOpen,setMenuOpen]=useState(false);
  const [expanded,setExpanded]=useState<string|null>(null);
  const [inquiryService,setInquiryService]=useState("");
