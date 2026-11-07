@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useRef, useState, type FormEvent } from "react";
-import { ArrowDown, ArrowRight, ArrowUpRight, BrainCircuit, BookOpen, BriefcaseBusiness, Check, CheckCircle2, ChevronRight, Cpu, Layers3, Mail, Menu, Monitor, Network, Phone, Send, ShieldCheck, Sparkles, Target, X, Zap } from "lucide-react";
+import { useEffect, useMemo, useState, type FormEvent } from "react";
+import { ArrowDown, ArrowRight, ArrowUpRight, BrainCircuit, BookOpen, Briefcase, Check, CheckCircle2, ChevronRight, Layers3, Mail, Menu, Monitor, Network, Phone, ShieldCheck, Target, X, Zap } from "lucide-react";
 import "./styles/globals.css";
 import "./styles/redesign.css";
 
@@ -7,7 +7,7 @@ const WHATSAPP = "525538107582";
 const EMAIL = "dreamszit0999@gmail.com";
 
 const units = [
- {id:"servicios",number:"01",name:"Brionix Services",title:"Servicios profesionales",tag:"ESTRATEGIA · DISEÑO · EJECUCIÓN",description:"Convertimos retos operativos y comerciales en planes claros y soluciones que sí se pueden poner en marcha.",icon:BriefcaseBusiness,accent:"gold",scope:["Consultoría tecnológica y diagnóstico","Marketing y estrategia digital","Diseño visual y comunicación","Implementación y soporte"],outcome:"Claridad para decidir, herramientas para avanzar y acompañamiento para ejecutar."},
+ {id:"servicios",number:"01",name:"Brionix Services",title:"Servicios profesionales",tag:"ESTRATEGIA · DISEÑO · EJECUCIÓN",description:"Convertimos retos operativos y comerciales en planes claros y soluciones que sí se pueden poner en marcha.",icon:Briefcase,accent:"gold",scope:["Consultoría tecnológica y diagnóstico","Marketing y estrategia digital","Diseño visual y comunicación","Implementación y soporte"],outcome:"Claridad para decidir, herramientas para avanzar y acompañamiento para ejecutar."},
  {id:"soluciones",number:"02",name:"Brionix Commerce",title:"Soluciones comerciales",tag:"TECNOLOGÍA PARA OPERAR",description:"Integramos software, equipamiento y procesos para que los comercios trabajen con mayor control y continuidad.",icon:Monitor,accent:"silver",scope:["Puntos de venta y configuración","Terminales, escáneres y periféricos","Equipamiento y hardware","Instalación y soporte"],outcome:"Operaciones más ordenadas, equipos adecuados y sistemas listos para trabajar."},
  {id:"digital",number:"03",name:"Brionix Digital",title:"Productos digitales",tag:"CONOCIMIENTO EN ACCIÓN",description:"Transformamos experiencia en publicaciones, herramientas y recursos digitales que ayudan a aprender y producir.",icon:BookOpen,accent:"blue",scope:["Ebooks y publicaciones","Guías especializadas","Plantillas y recursos de trabajo","Prompts y materiales digitales"],outcome:"Conocimiento accesible, recursos reutilizables y productos con utilidad real."},
  {id:"ia",number:"04",name:"Brionix Labs",title:"IA e investigación",tag:"EXPLORACIÓN · ARQUITECTURA · FUTURO",description:"Investigamos nuevas formas de coordinar modelos, agentes, herramientas y sistemas inteligentes.",icon:BrainCircuit,accent:"gold",scope:["Meta-Orchestrator y arquitectura multiagente","Integración de modelos y herramientas","Gobernanza y evaluación de sistemas","Experimentación aplicada"],outcome:"Arquitecturas modulares, validación independiente y libertad tecnológica."}
@@ -17,7 +17,7 @@ function Brand(){return <a className="brand" href="#inicio" aria-label="Brionix 
 
 function ContactForm(){
  const [step,setStep]=useState(1),[service,setService]=useState(""),[name,setName]=useState(""),[phone,setPhone]=useState(""),[email,setEmail]=useState(""),[message,setMessage]=useState(""),[opened,setOpened]=useState(false);
- const choices=[{label:"Consultoría y estrategia",detail:"Diagnóstico, diseño y crecimiento",icon:BriefcaseBusiness},{label:"Soluciones para comercios",detail:"Punto de venta, equipo y soporte",icon:Monitor},{label:"Productos digitales",detail:"Publicaciones, guías y recursos",icon:BookOpen},{label:"IA e investigación",detail:"Automatización y sistemas inteligentes",icon:BrainCircuit},{label:"Alianzas y otros proyectos",detail:"Colaboraciones y nuevas iniciativas",icon:Network}];
+ const choices=[{label:"Consultoría y estrategia",detail:"Diagnóstico, diseño y crecimiento",icon:Briefcase},{label:"Soluciones para comercios",detail:"Punto de venta, equipo y soporte",icon:Monitor},{label:"Productos digitales",detail:"Publicaciones, guías y recursos",icon:BookOpen},{label:"IA e investigación",detail:"Automatización y sistemas inteligentes",icon:BrainCircuit},{label:"Alianzas y otros proyectos",detail:"Colaboraciones y nuevas iniciativas",icon:Network}];
  const prepared=useMemo(()=>["Hola, Brionix Systems. Quiero conversar sobre un proyecto.","Nombre: "+name,"WhatsApp: "+phone,"Correo: "+email,"Área: "+service,"Proyecto: "+(message||"Me gustaría recibir orientación inicial.")].join("\n"),[name,phone,email,service,message]);
  function submit(e:FormEvent<HTMLFormElement>){e.preventDefault();if(!service)return;const w=window.open("https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(prepared),"_blank","noopener,noreferrer");setOpened(Boolean(w));}
  return <form className="contact-form" onSubmit={submit}>
