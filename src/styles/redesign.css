@@ -129,3 +129,30 @@ body{background:#050b14;color:#edf7ff}
  .brand img{width:48px;height:44px}
  .hero-visual.hero-logo-lockup{height:300px;padding:6px}
 }
+
+
+/* Lead-generation journey and Brionix delivery method */
+.process-section{background:#071625;border-top:1px solid #183c56;border-bottom:1px solid #183c56}
+.process-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border:1px solid #1c4967;margin-top:38px}
+.process-grid article{padding:27px 24px;min-height:190px;border-right:1px solid #1c4967}
+.process-grid article:last-child{border-right:0}
+.process-grid article>span{display:inline-flex;color:#58d7ff;font:700 11px "DM Sans";letter-spacing:.18em;margin-bottom:28px}
+.process-grid h3{font:650 19px Manrope;color:#eaf7ff;margin:0 0 12px;letter-spacing:-.03em}
+.process-grid p{font-size:12px;line-height:1.8;color:#9fb6c8;margin:0}
+.service-outcome a,.project-content>a{display:inline-flex;align-items:center;gap:8px}
+.service-outcome a:hover,.project-content>a:hover{color:#c4f5ff;text-shadow:0 0 18px #37c8ff66}
+.form-notice{display:flex;align-items:center;flex-wrap:wrap;gap:7px}
+.form-notice a{color:#b7f1ff;text-decoration:underline;text-underline-offset:3px;font-weight:700}
+@media(max-width:900px){
+ .process-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .process-grid article:nth-child(2){border-right:0}
+ .process-grid article:nth-child(-n+2){border-bottom:1px solid #1c4967}
+}
+@media(max-width:720px){
+ .process-grid{grid-template-columns:1fr}
+ .process-grid article{min-height:0;padding:22px;border-right:0;border-bottom:1px solid #1c4967}
+ .process-grid article:last-child{border-bottom:0}
+ .process-grid article>span{margin-bottom:15px}
+ .process-grid h3{font-size:18px}
+ .process-grid p{font-size:12px}
+}
