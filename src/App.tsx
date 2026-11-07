@@ -19,7 +19,7 @@ const projects = [
   { tag:"PUBLICACIÓN · RECURSOS", title:"Productos de conocimiento", desc:"Guías, publicaciones y herramientas digitales diseñadas para convertir experiencia en recursos prácticos.", type:"digital", label:"DIGITAL / 003" }
 ];
 
-function Brand(){return <a className="brand" href="#inicio" aria-label="Brionix Systems, inicio"><img src="/brionix-symbol.svg" alt="" /><span>BRIONIX<small>SYSTEMS</small></span></a>}
+function Brand(){return <a className="brand" href="#inicio" aria-label="Brionix Systems, inicio"><img src="/brionix-symbol.svg" alt="Luciérnaga tecnológica Brionix" /><span>BRIONIX<small>SYSTEMS</small></span></a>}
 
 function ContactForm(){
  const [service,setService]=useState("");
@@ -54,8 +54,8 @@ export default function App(){
   <header className="topbar"><div className="container nav-wrap"><Brand/><button className="mobile-menu" onClick={()=>setMenuOpen(v=>!v)} aria-label={menuOpen?"Cerrar menú":"Abrir menú"}>{menuOpen?<X/>:<Menu/>}</button><nav className={menuOpen?"nav-links open":"nav-links"}>{nav.map(([label,href])=><a key={href} href={href} onClick={()=>setMenuOpen(false)}>{label}</a>)}</nav><a className="nav-cta" href="#contacto">Hablemos <ArrowUpRight size={15}/></a></div></header>
   <main>
    <section className="hero container">
-    <div className="hero-copy"><p className="eyebrow"><span className="eyebrow-rule"/> TECNOLOGÍA · INTELIGENCIA · CRECIMIENTO</p><h1>La tecnología debe resolver algo.<em> Hagamos que suceda.</em></h1><p className="hero-lead">Diseñamos e integramos soluciones para negocios y personas: desde la estrategia y la operación diaria hasta productos digitales e inteligencia artificial.</p><div className="hero-actions"><a className="button button-primary" href="#servicios">Explorar soluciones <ArrowUpRight size={17}/></a><a className="text-link" href="#nosotros">Conocer Brionix <ArrowDownRight size={17}/></a></div><div className="hero-proof"><span><Zap/> Soluciones aplicables</span><span><ShieldCheck/> Criterio y confianza</span><span><Layers3/> Visión de sistema</span></div></div>
-    <div className="hero-visual"><div className="visual-meta"><span>BRIONIX SYSTEMS</span><span>EST. / DIGITAL THINKING</span></div><div className="visual-monogram"><img src="/brionix-symbol.svg" alt="Símbolo geométrico Brionix Systems"/></div><div className="visual-bottom"><strong>Ideas into systems.</strong><span>TECHNOLOGY / INTELLIGENCE / GROWTH</span></div><div className="visual-index">B<span>—</span>01</div></div>
+    <div className="hero-copy"><p className="eyebrow"><span className="eyebrow-rule"/> TECNOLOGÍA · INTELIGENCIA · EVOLUCIÓN</p><h1>La tecnología debe resolver algo.<em> Hagamos que suceda.</em></h1><p className="hero-lead">Diseñamos e integramos soluciones para negocios y personas: desde la estrategia y la operación diaria hasta productos digitales e inteligencia artificial.</p><div className="hero-actions"><a className="button button-primary" href="#servicios">Explorar soluciones <ArrowUpRight size={17}/></a><a className="text-link" href="#nosotros">Conocer Brionix <ArrowDownRight size={17}/></a></div><div className="hero-proof"><span><Zap/> Soluciones aplicables</span><span><ShieldCheck/> Criterio y confianza</span><span><Layers3/> Visión de sistema</span></div></div>
+    <div className="hero-visual"><div className="visual-meta"><span>BRIONIX SYSTEMS</span><span>ILLUMINATING INTELLIGENCE</span></div><div className="visual-monogram"><img src="/brionix-symbol.svg" alt="Luciérnaga luminosa, símbolo de Brionix Systems"/></div><div className="visual-bottom"><strong>Illuminating the Future of Intelligence.</strong><span>TECHNOLOGY / INTELLIGENCE / GROWTH</span></div><div className="visual-index">B<span>—</span>01</div></div>
     <div className="hero-ribbon"><span>ESTRATEGIA</span><i/><span>IMPLEMENTACIÓN</span><i/><span>PRODUCTOS DIGITALES</span><i/><span>INVESTIGACIÓN</span><i/><span>EVOLUCIÓN</span></div>
    </section>
 
