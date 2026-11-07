@@ -8,6 +8,7 @@ const messages: Record<Locale, Record<string, string>> = {
   es: {
 },
   en: {
+    "+ [código país] [número]": "+ [country code] [number]",
     "Nosotros":"About", "Servicios":"Services", "Proyectos":"Projects", "Cómo trabajamos":"How we work", "Contacto":"Contact",
     "Hablemos":"Let's talk", "Cerrar menú":"Close menu", "Abrir menú":"Open menu",
     "La tecnología debe resolver algo.":"Technology should solve something.", " Hagamos que suceda.":" Let's make it happen.",
@@ -289,6 +290,7 @@ const messages: Record<Locale, Record<string, string>> = {
     "Unas líneas bastan para entender el reto y orientarte.":"A few lines are enough to understand your challenge and guide you.",
     "TECNOLOGÍA CON PROPÓSITO.":"TECHNOLOGY WITH PURPOSE."
   zh: {
+    "+ [código país] [número]": "+ [国家代码] [号码]",
     "Nosotros":"关于我们", "Servicios":"服务", "Proyectos":"项目", "Cómo trabajamos":"工作方式", "Contacto":"联系",
     "Hablemos":"联系我们", "Cerrar menú":"关闭菜单", "Abrir menú":"打开菜单",
     "La tecnología debe resolver algo.":"科技应该解决实际问题。", " Hagamos que suceda.":" 让我们把它变成现实。",
@@ -570,6 +572,7 @@ const messages: Record<Locale, Record<string, string>> = {
     "Unas líneas bastan para entender el reto y orientarte.":"简单描述即可帮助我们理解问题并提供建议。",
     "TECNOLOGÍA CON PROPÓSITO.":"让科技创造价值。"
   de: {
+    "+ [código país] [número]": "+ [Ländervorwahl] [Rufnummer]",
     "Nosotros":"Über uns", "Servicios":"Leistungen", "Proyectos":"Projekte", "Cómo trabajamos":"Arbeitsweise", "Contacto":"Kontakt",
     "Hablemos":"Sprechen wir", "Cerrar menú":"Menü schließen", "Abrir menú":"Menü öffnen",
     "La tecnología debe resolver algo.":"Technologie soll Probleme lösen.", " Hagamos que suceda.":" Machen wir es möglich.",
