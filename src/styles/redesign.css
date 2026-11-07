@@ -156,3 +156,20 @@ body{background:#050b14;color:#edf7ff}
  .process-grid h3{font-size:18px}
  .process-grid p{font-size:12px}
 }
+
+
+/* Individual service offer cards */
+.service-detail>div:first-child{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-content:start}
+.service-detail>div:first-child>.detail-caption{grid-column:1/-1;margin-bottom:4px}
+.service-offer{display:flex;flex-direction:column;justify-content:space-between;gap:17px;min-height:164px;padding:18px;border:1px solid #1d4a68;background:linear-gradient(145deg,#0d263b,#081726);transition:border-color .2s,transform .2s,background .2s}
+.service-offer:hover{border-color:#4acfff;transform:translateY(-2px);background:linear-gradient(145deg,#10314b,#091b2c)}
+.offer-copy h4{margin:0 0 9px;color:#eaf8ff;font:650 14px/1.4 Manrope;letter-spacing:-.02em}
+.offer-copy p{display:block!important;margin:0!important;color:#9eb9cc!important;font-size:11px!important;line-height:1.7!important}
+.offer-cta{display:inline-flex;align-items:center;align-self:flex-start;gap:8px;padding:0;border:0;background:none;color:#76ddff;font-size:10px;font-weight:700;cursor:pointer}
+.offer-cta:hover{color:#d0f7ff}
+.service-detail .service-outcome{align-self:stretch}
+@media(max-width:720px){
+ .service-detail>div:first-child{grid-template-columns:1fr}
+ .service-offer{min-height:0;padding:16px}
+ .offer-copy h4{font-size:14px}
+}
