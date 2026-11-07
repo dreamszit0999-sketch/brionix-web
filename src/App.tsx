@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from "react";
-import { ArrowDownRight, ArrowUpRight, BrainCircuit, Bot, Check, ChevronDown, Code2, Compass, Layers3, Mail, Menu, MessageCircle, Monitor, Network, PenTool, Phone, Send, ShieldCheck, Sparkles, X, Zap } from "lucide-react";
+import { ArrowDownRight, ArrowUpRight, BrainCircuit, Bot, Check, ChevronDown, Code2, Compass, Layers3, Mail, Menu, MessageCircle, Monitor, Network, PenTool, Phone, ShieldCheck, Sparkles, X, Zap } from "lucide-react";
 import "./styles/globals.css";
 import "./styles/redesign.css";
 
