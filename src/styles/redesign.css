@@ -182,3 +182,58 @@ body{background:#050b14;color:#edf7ff}
  .hero-actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px}
  .hero-whatsapp-cta{font-size:11px}
 }
+
+
+/* BRIONIX FREE VIRTUAL ADVISOR — guided, local-first experience */
+.advisor-widget{position:fixed;right:26px;bottom:25px;z-index:1000;font-family:inherit}
+.advisor-launcher{display:flex;align-items:center;gap:10px;border:1px solid #6adfff;border-radius:999px;padding:14px 19px;background:linear-gradient(115deg,#8deaff,#25aeea);color:#041321;font:700 13px Manrope, sans-serif;box-shadow:0 10px 35px #0008,0 0 25px #26bfff35;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.advisor-launcher:hover{transform:translateY(-2px);box-shadow:0 12px 40px #0009,0 0 32px #26bfff55}
+.advisor-panel{position:absolute;right:0;bottom:68px;width:min(390px,calc(100vw - 30px));height:min(650px,calc(100vh - 125px));display:flex;flex-direction:column;overflow:hidden;border:1px solid #28658a;border-radius:18px;background:#071523;box-shadow:0 22px 70px #000b,0 0 35px #16bfff16}
+.advisor-header{display:flex;align-items:center;gap:11px;padding:15px 16px;background:linear-gradient(110deg,#0d2b43,#091827);border-bottom:1px solid #1e4865}
+.advisor-avatar{width:38px;height:38px;display:grid;place-items:center;border:1px solid #368bb3;border-radius:12px;background:#0a263b;color:#8ce8ff}
+.advisor-header>div:nth-child(2){display:flex;flex:1;flex-direction:column;gap:3px}
+.advisor-header strong{font:700 13px Manrope;color:#effaff}
+.advisor-header span{font-size:10px;color:#9cb6c8}
+.advisor-header span i{display:inline-block;width:6px;height:6px;margin-right:5px;border-radius:50%;background:#55d99a}
+.advisor-header>button{display:grid;place-items:center;width:32px;height:32px;border:0;border-radius:8px;background:#102b40;color:#b9d8e8;cursor:pointer}
+.advisor-messages{display:flex;flex:1;flex-direction:column;gap:12px;overflow:auto;padding:17px 14px}
+.advisor-bubble{max-width:92%;padding:12px 13px;border-radius:12px;font-size:12px;line-height:1.65}
+.advisor-bot{align-self:flex-start;background:#10263a;border:1px solid #1c4059;color:#d8eaf4;border-top-left-radius:4px}
+.advisor-user{align-self:flex-end;background:#12466a;border:1px solid #26739a;color:#f1fbff;border-top-right-radius:4px}
+.advisor-options{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.advisor-options button{display:flex;align-items:center;justify-content:space-between;gap:5px;min-height:42px;padding:9px 10px;border:1px solid #24516e;border-radius:9px;background:#0a1c2c;color:#c9e6f4;text-align:left;font:600 10px Manrope;cursor:pointer;transition:border-color .2s,background .2s}
+.advisor-options button:hover{border-color:#61d9ff;background:#0d2b40;color:#fff}
+.advisor-field{display:flex;flex-direction:column;gap:6px;color:#9fc0d2;font-size:10px;font-weight:600}
+.advisor-field input,.advisor-field textarea{width:100%;box-sizing:border-box;border:1px solid #254b65;border-radius:8px;background:#06111e;color:#effaff;padding:10px 11px;font-family:inherit;font-size:12px;font-weight:400;outline:none;resize:vertical}
+.advisor-field input:focus,.advisor-field textarea:focus{border-color:#56d5ff;box-shadow:0 0 0 2px #36c8ff20}
+.advisor-next,.advisor-send{display:flex;align-items:center;justify-content:center;gap:8px;min-height:42px;padding:10px 13px;border:1px solid #60d8ff;border-radius:9px;background:linear-gradient(110deg,#8deaff,#25aeea);color:#041321;text-decoration:none;font:700 11px Manrope;cursor:pointer}
+.advisor-summary{display:flex;flex-direction:column;gap:7px;padding:13px;border:1px solid #28658a;border-radius:10px;background:#0b2133;color:#e7f7ff}
+.advisor-summary>span{font-size:9px;letter-spacing:.12em;color:#69d9ff}
+.advisor-summary strong{font-size:13px}
+.advisor-summary p,.advisor-summary small{margin:0;color:#b4cad8;font-size:11px;line-height:1.5}
+.advisor-reset{align-self:center;border:0;background:none;color:#80dfff;text-decoration:underline;text-underline-offset:3px;font-size:10px;cursor:pointer}
+.advisor-footer{display:flex;align-items:center;justify-content:center;gap:6px;padding:10px;border-top:1px solid #1a3a52;color:#7898ae;font-size:9px}
+@media(max-width:520px){.advisor-widget{right:14px;bottom:14px}.advisor-panel{right:-2px;bottom:62px;height:min(620px,calc(100vh - 100px));width:calc(100vw - 24px)}.advisor-launcher{padding:13px 16px}.advisor-options{grid-template-columns:1fr 1fr}}
+
+
+/* Virtual advisor — contact validation and pre-send review */
+.advisor-error{margin:0;padding:9px 11px;border:1px solid #9b4545;border-radius:8px;background:#35191d;color:#ffc5c5;font-size:10px;line-height:1.5}
+.advisor-required-note,.advisor-review-note{margin:0;color:#91aabd;font-size:9px;line-height:1.6}
+.advisor-field b{color:#80e1ff}
+.advisor-summary p{overflow-wrap:anywhere}
+.advisor-edit{align-self:center;padding:5px 8px;border:0;background:none;color:#8deaff;text-decoration:underline;text-underline-offset:3px;font:600 10px Manrope;cursor:pointer}
+.advisor-edit:hover{color:#fff}
+
+
+/* Multilingual selector */
+.language-switch{display:flex;align-items:center;gap:7px;margin-left:auto;padding:6px 9px;border:1px solid #24516f;border-radius:8px;background:#081a2a;color:#bdefff}
+.language-switch select{max-width:112px;border:0;outline:0;background:transparent;color:#dff8ff;font:600 11px Manrope,sans-serif;cursor:pointer}
+.language-switch option{background:#071523;color:#effaff}
+.language-globe{font-size:15px;color:#70ddff}
+@media(max-width:720px){.language-switch{margin-left:auto;margin-right:8px;padding:5px 7px}.language-switch select{max-width:82px;font-size:10px}.mobile-menu{margin-left:0}}
+
+
+/* Multilingual typography support */
+:lang(zh), :lang(zh) input, :lang(zh) textarea, :lang(zh) button, :lang(zh) select{font-family:"Noto Sans SC","Microsoft YaHei","PingFang SC",sans-serif}
+:lang(de) .service-title strong,:lang(de) .service-title em,:lang(de) .offer-copy h4,:lang(de) .section-heading h2{overflow-wrap:anywhere;hyphens:auto}
+.language-switch select{min-width:0}
