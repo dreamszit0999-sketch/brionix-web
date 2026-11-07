@@ -56,7 +56,7 @@ const projects = [
 
 function Brand(){return <a className="brand" href="#inicio" aria-label="Brionix Systems, inicio"><img src="/brionix-symbol-approved.png" alt="Emblema oficial de luciérnaga Brionix Systems" /><span>BRIONIX<small>SYSTEMS</small></span></a>}
 
-function ContactForm({service,setService,locale,t}:{service:string;setService:(value:string)=>void;locale:Locale;t:(value:string)=>string}){
+function ContactForm({service,setService,t}:{service:string;setService:(value:string)=>void;t:(value:string)=>string}){
 
  const [name,setName]=useState("");
  const [email,setEmail]=useState("");
@@ -95,7 +95,7 @@ const advisorPaths:Record<string,{service:string;question:string;options:Advisor
   soporte:{service:"Soporte y reparación de computadoras",question:"¿Qué sucede con tu equipo?",options:[{label:"Está lento o falla",value:"Equipo lento o con fallas"},{label:"Necesita mantenimiento",value:"Mantenimiento preventivo"},{label:"Quiero ampliar RAM o SSD",value:"Actualización de componentes"},{label:"Necesito instalar o configurar",value:"Instalación y configuración"}]},
   ia:{service:"Inteligencia artificial e investigación",question:"¿Qué te interesa explorar?",options:[{label:"Un asistente con IA",value:"Asistente con IA"},{label:"Automatizar un proceso con IA",value:"Automatización con IA"},{label:"Conectar modelos y herramientas",value:"Integración de modelos y herramientas"},{label:"Diseñar agentes",value:"Arquitectura de agentes"}]}
 };
-function VirtualAdvisor({locale,t}:{locale:Locale;t:(value:string)=>string}){
+function VirtualAdvisor({t}:{t:(value:string)=>string}){
 
  const [open,setOpen]=useState(false);
  const [step,setStep]=useState<"start"|"path"|"detail"|"contact"|"done">("start");
@@ -169,9 +169,9 @@ export default function App(){
 
    <section className="process-section section" id="proceso"><div className="container"><div className="section-top"><span>{t("04 / CÓMO TRABAJAMOS")}</span><span>{t("DE LA NECESIDAD A LA SOLUCIÓN")}</span></div><div className="section-heading"><div><p className="eyebrow">{t("MÉTODO BRIONIX")}</p><h2>{t("Un proceso claro.")}<br/><em>{t("Resultados con dirección.")}</em></h2></div><p>{t("Cada proyecto comienza entendiendo el problema y termina con una solución implementada, documentada y preparada para evolucionar.")}</p></div><div className="process-grid"><article><span>01</span><h3>{t("Diagnóstico")}</h3><p>{t("Escuchamos tu necesidad, revisamos el contexto y definimos qué debe resolverse.")}</p></article><article><span>02</span><h3>{t("Diseño de solución")}</h3><p>{t("Proponemos alcance, entregables, herramientas, tiempos y una ruta de trabajo.")}</p></article><article><span>03</span><h3>{t("Implementación")}</h3><p>{t("Diseñamos, desarrollamos, configuramos o integramos la solución acordada.")}</p></article><article><span>04</span><h3>{t("Evolución")}</h3><p>{t("Entregamos, documentamos y definimos los siguientes pasos de mejora o soporte.")}</p></article></div></div></section>
 
-   <section className="contact-section section" id="contacto"><div className="container"><div className="section-top"><span>{t("05 / CONTACTO")}</span><span>{t("EL PRÓXIMO PASO EMPIEZA CON UNA CONVERSACIÓN")}</span></div><div className="contact-grid"><div className="contact-copy"><p className="eyebrow">{t("HABLEMOS DE TU PROYECTO")}</p><h2>{t("Cuéntanos el reto.")}<em>{t(" Diseñemos el siguiente paso.")}</em></h2><p>{t("Cuéntanos qué necesitas y te ayudaremos a encontrar la solución adecuada. Sin complicaciones y con expectativas claras.")}</p><a className="contact-line" href={"https://wa.me/"+WHATSAPP} target="_blank" rel="noreferrer"><Phone/><span><small>WHATSAPP</small>+52 55 3810 7582</span><ArrowUpRight/></a><a className="contact-line" href={"mailto:"+EMAIL}><Mail/><span><small>{t("CORREO")}</small>{EMAIL}</span><ArrowUpRight/></a></div><ContactForm service={inquiryService} setService={setInquiryService} locale={locale} t={t}/></div></div></section>
+   <section className="contact-section section" id="contacto"><div className="container"><div className="section-top"><span>{t("05 / CONTACTO")}</span><span>{t("EL PRÓXIMO PASO EMPIEZA CON UNA CONVERSACIÓN")}</span></div><div className="contact-grid"><div className="contact-copy"><p className="eyebrow">{t("HABLEMOS DE TU PROYECTO")}</p><h2>{t("Cuéntanos el reto.")}<em>{t(" Diseñemos el siguiente paso.")}</em></h2><p>{t("Cuéntanos qué necesitas y te ayudaremos a encontrar la solución adecuada. Sin complicaciones y con expectativas claras.")}</p><a className="contact-line" href={"https://wa.me/"+WHATSAPP} target="_blank" rel="noreferrer"><Phone/><span><small>WHATSAPP</small>+52 55 3810 7582</span><ArrowUpRight/></a><a className="contact-line" href={"mailto:"+EMAIL}><Mail/><span><small>{t("CORREO")}</small>{EMAIL}</span><ArrowUpRight/></a></div><ContactForm service={inquiryService} setService={setInquiryService} t={t}/></div></div></section>
   </main>
-  <VirtualAdvisor locale={locale} t={t}/>
+  <VirtualAdvisor t={t}/>
   <footer className="footer"><div className="container footer-main"><Brand/><p>Ideas into systems.<br/>Technology · Intelligence · Growth</p><a href="#inicio">{t("VOLVER AL INICIO ↑")}</a></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} BRIONIX SYSTEMS. {t("TODOS LOS DERECHOS RESERVADOS.")}</span><span>{t("TECNOLOGÍA CON PROPÓSITO.")}</span></div></footer>
  </div>
 }
