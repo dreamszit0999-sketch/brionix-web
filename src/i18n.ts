@@ -7,6 +7,26 @@ export const localeLabels: Record<Locale, string> = {
 const messages: Record<Locale, Record<string, string>> = {
   es: {},
   en: {
+    "Brionix Meta-Orchestrator": "Brionix Meta-Orchestrator",
+    "Sistemas de punto de venta": "Point-of-sale systems",
+    "Productos de conocimiento": "Knowledge products",
+    "Orientación inicial": "Initial guidance",
+    "Orientación general": "General guidance",
+    "¿Te ayudamos?": "Can we help?",
+    "Cerrar asesor virtual": "Close virtual advisor",
+    "Abrir asesor virtual": "Open virtual advisor",
+    "Por ejemplo: tengo una tienda y necesito controlar productos y ventas.": "For example: I run a shop and need to manage products and sales.",
+    "Preparamos tu solicitud. Si WhatsApp no se abrió, utiliza el enlace de abajo para continuar.": "Your request is ready. If WhatsApp didn't open, use the link below to continue.",
+    "Hola, Brionix Systems. Quiero conversar sobre un proyecto.": "Hello Brionix Systems. I'd like to discuss a project.",
+    "Hola, Brionix Systems. El Asesor Virtual me ayudó a preparar esta solicitud.": "Hello Brionix Systems. The virtual advisor helped me prepare this request.",
+    "Correo: ": "Email: ",
+    "Área: ": "Service: ",
+    "Proyecto: ": "Project: ",
+    "Nombre: ": "Name: ",
+    "Negocio: ": "Business: ",
+    "Necesidad: ": "Need: ",
+    "Detalles: ": "Details: ",
+    "Orientación inicial gratuita · Sin registro": "Free initial guidance · No registration",
     "¿Qué te gustaría resolver primero?": "What would you like to address first?",
     "Organizar o mejorar mi negocio": "Organize or improve my business",
     "Digitalizar ventas o inventario": "Digitize sales or inventory",
@@ -235,6 +255,26 @@ const messages: Record<Locale, Record<string, string>> = {
     "TECNOLOGÍA CON PROPÓSITO.":"TECHNOLOGY WITH PURPOSE."
   },
   zh: {
+    "Brionix Meta-Orchestrator": "Brionix Meta-Orchestrator",
+    "Sistemas de punto de venta": "销售终端系统",
+    "Productos de conocimiento": "知识产品",
+    "Orientación inicial": "初步咨询",
+    "Orientación general": "一般咨询",
+    "¿Te ayudamos?": "需要帮助吗？",
+    "Cerrar asesor virtual": "关闭虚拟顾问",
+    "Abrir asesor virtual": "打开虚拟顾问",
+    "Por ejemplo: tengo una tienda y necesito controlar productos y ventas.": "例如：我经营一家商店，需要管理商品和销售。",
+    "Preparamos tu solicitud. Si WhatsApp no se abrió, utiliza el enlace de abajo para continuar.": "您的请求已准备好。如果 WhatsApp 未打开，请使用下方链接继续。",
+    "Hola, Brionix Systems. Quiero conversar sobre un proyecto.": "您好，Brionix Systems。我想讨论一个项目。",
+    "Hola, Brionix Systems. El Asesor Virtual me ayudó a preparar esta solicitud.": "您好，Brionix Systems。虚拟顾问帮助我准备了这份需求。",
+    "Correo: ": "邮箱：",
+    "Área: ": "领域：",
+    "Proyecto: ": "项目：",
+    "Nombre: ": "姓名：",
+    "Negocio: ": "业务：",
+    "Necesidad: ": "需求：",
+    "Detalles: ": "详情：",
+    "Orientación inicial gratuita · Sin registro": "免费初步咨询 · 无需注册",
     "¿Qué te gustaría resolver primero?": "您想先解决什么问题？",
     "Organizar o mejorar mi negocio": "整理或改善我的业务",
     "Digitalizar ventas o inventario": "实现销售或库存数字化",
@@ -463,6 +503,26 @@ const messages: Record<Locale, Record<string, string>> = {
     "TECNOLOGÍA CON PROPÓSITO.":"让科技创造价值。"
   },
   de: {
+    "Brionix Meta-Orchestrator": "Brionix Meta-Orchestrator",
+    "Sistemas de punto de venta": "Kassensysteme",
+    "Productos de conocimiento": "Wissensprodukte",
+    "Orientación inicial": "Erstberatung",
+    "Orientación general": "Allgemeine Beratung",
+    "¿Te ayudamos?": "Wie können wir helfen?",
+    "Cerrar asesor virtual": "Virtuellen Berater schließen",
+    "Abrir asesor virtual": "Virtuellen Berater öffnen",
+    "Por ejemplo: tengo una tienda y necesito controlar productos y ventas.": "Zum Beispiel: Ich betreibe ein Geschäft und möchte Produkte und Verkäufe verwalten.",
+    "Preparamos tu solicitud. Si WhatsApp no se abrió, utiliza el enlace de abajo para continuar.": "Ihre Anfrage ist vorbereitet. Falls WhatsApp nicht geöffnet wurde, nutzen Sie bitte den Link unten.",
+    "Hola, Brionix Systems. Quiero conversar sobre un proyecto.": "Hallo Brionix Systems. Ich möchte ein Projekt besprechen.",
+    "Hola, Brionix Systems. El Asesor Virtual me ayudó a preparar esta solicitud.": "Hallo Brionix Systems. Der virtuelle Berater hat mir geholfen, diese Anfrage vorzubereiten.",
+    "Correo: ": "E-Mail: ",
+    "Área: ": "Bereich: ",
+    "Proyecto: ": "Projekt: ",
+    "Nombre: ": "Name: ",
+    "Negocio: ": "Unternehmen: ",
+    "Necesidad: ": "Anliegen: ",
+    "Detalles: ": "Details: ",
+    "Orientación inicial gratuita · Sin registro": "Kostenlose Erstberatung · Ohne Registrierung",
     "¿Qué te gustaría resolver primero?": "Was möchten Sie zuerst verbessern?",
     "Organizar o mejorar mi negocio": "Mein Unternehmen organisieren oder verbessern",
     "Digitalizar ventas o inventario": "Verkauf oder Lager digitalisieren",
@@ -693,5 +753,8 @@ const messages: Record<Locale, Record<string, string>> = {
 };
 
 export function translate(locale: Locale, text: string): string {
-  return messages[locale][text] ?? text;
+  const exact = messages[locale][text];
+  if (exact) return exact;
+  if (text.includes(" — ")) return text.split(" — ").map((part) => messages[locale][part] ?? part).join(" — ");
+  return text;
 }
