@@ -109,7 +109,7 @@ function VirtualAdvisor(){
  function choosePath(value:string){setPath(value);setStep("path")}
  function chooseNeed(value:string){setNeed(value);setStep("detail")}
  function buildWhatsApp(){
-  const message=["Hola, Brionix Systems. El Asesor Virtual me ayudó a preparar esta solicitud.","Nombre: "+(name||"Por proporcionar"),"WhatsApp: "+(phone||"Por proporcionar"),"Correo: "+(email||"No proporcionado"),"Tipo de negocio: "+(business||"No especificado"),"Área: "+(selected?.service||"Orientación general"),"Necesidad: "+(need||"Por definir"),"Detalles: "+(detail||"Solicito orientación inicial.")].join("\\n");
+  const message=["Hola, Brionix Systems. El Asesor Virtual me ayudó a preparar esta solicitud.","Nombre: "+(name||"Por proporcionar"),"WhatsApp: "+(phone||"Por proporcionar"),"Correo: "+(email||"No proporcionado"),"Tipo de negocio: "+(business||"No especificado"),"Área: "+(selected?.service||"Orientación general"),"Necesidad: "+(need||"Por definir"),"Detalles: "+(detail||"Solicito orientación inicial.")].join("\n");
   return "https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(message);
  }
  return <div className="advisor-widget">
