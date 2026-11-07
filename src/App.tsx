@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState, type FormEvent } from "react";
+import { useEffect, useMemo, useRef, useState, type FormEvent } from "react";
 import { ArrowDown, ArrowRight, ArrowUpRight, BrainCircuit, BookOpen, Briefcase, Check, CheckCircle2, ChevronRight, Layers3, Mail, Menu, Monitor, Network, Phone, ShieldCheck, Target, X, Zap } from "lucide-react";
 import "./styles/globals.css";
 import "./styles/redesign.css";
